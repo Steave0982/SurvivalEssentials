@@ -11,7 +11,7 @@ I will be working on many features as this plugin grows. Here are the commands c
 
 ### Installation
 
-This plugin requires spigot to run.
+This plugin requires spigot to run. Download the plugin from here! [Download] 
 
 ```sh
 $ Download The Plugin
@@ -24,3 +24,7 @@ $ Restart server!
 * Teleport Command
 * Spawn Command
 * Cosmetics!
+
+
+
+[download]: <https://github.com/Steave0982/SurvivalEssentials/releases>
