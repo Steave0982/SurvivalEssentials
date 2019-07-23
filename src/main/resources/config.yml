@@ -1,0 +1,7 @@
+Enabled: "&a StaffChat Enabled"
+Disabled: "&c StaffChat Disabled"
+no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
+#Allows you to send a message to staffchat without using the toggle. Put the following character first to use.
+prefix: "!"
+# Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.
+message-format: "&f[&cStaff-Chat&f] {NAME}: {MESSAGE} "

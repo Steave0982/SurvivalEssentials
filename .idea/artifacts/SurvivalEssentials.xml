@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SurvivalEssentials">
+    <output-path>$PROJECT_DIR$/out/artifacts/SurvivalEssentials</output-path>
+    <root id="archive" name="SurvivalEssentials.jar">
+      <element id="module-output" name="SurvivalEssentials" />
+      <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>

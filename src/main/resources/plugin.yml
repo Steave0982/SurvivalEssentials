@@ -1,0 +1,8 @@
+name: SurvivalEssentials
+version: 1.0
+main: com.sandwich.SurvivalEssentials
+commands:
+  StaffChat:
+    description: Allows staff to communicate.
+    aliases:
+    - sc
