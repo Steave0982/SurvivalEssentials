@@ -12,6 +12,7 @@ public class Title {
      *
      * @deprecated No longer in use.
      */
+
     @Deprecated
     public static boolean DEBUG;
     private JSONObject title, subtitle;

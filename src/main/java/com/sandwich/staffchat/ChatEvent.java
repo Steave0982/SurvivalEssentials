@@ -10,12 +10,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 
-
 public class ChatEvent implements Listener
 {
     private SurvivalEssentials SC;
 
-    public ChatEvent(SurvivalEssentials SC) { this.SC = SC; }
+    public ChatEvent(SurvivalEssentials SC) {
+        this.SC = SC;
+    }
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void chatEvent(AsyncPlayerChatEvent event) {

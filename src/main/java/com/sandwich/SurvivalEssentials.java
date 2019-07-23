@@ -34,9 +34,8 @@ public class SurvivalEssentials extends JavaPlugin {
         log.info(ChatColor.GREEN + "SurvivalEssentials is Enabled");
         getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
         getCommand("staffchat").setExecutor(new EnableSC(this));
+
         this.ToggledStaff = new ArrayList();
-        getConfig().options().copyDefaults();
-        saveDefaultConfig();
     }
 
     public void enableStaffChat(String player) {
@@ -58,7 +57,6 @@ public class SurvivalEssentials extends JavaPlugin {
     @Override
     public void onDisable() {
         log.info(ChatColor.RED + "SurvivalEssentials is Disabled");
-
     }
 
 
