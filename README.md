@@ -18,3 +18,9 @@ $ Download The Plugin
 $ Uplaod the plugin into your servers plugin folder
 $ Restart server!
 ```
+
+### TODO
+* Add Permission groups
+* Teleport Command
+* Spawn Command
+* Cosmetics!
