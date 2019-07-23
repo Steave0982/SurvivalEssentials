@@ -1,6 +1,8 @@
 # SurvivlalEssentials
 A plugin that hosts all the "main" features for a survival server
 
+[![Build Status](https://travis-ci.com/Steave0982/SurvivalEssentials.svg?branch=master)](https://travis-ci.com/Steave0982/SurvivalEssentials)
+
 ### Features
 
 I will be working on many features as this plugin grows. Here are the commands currently enabled:
