@@ -1,11 +1,3 @@
-Enabled: "&a StaffChat Enabled"
-Disabled: "&c StaffChat Disabled"
-no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
-#Allows you to send a message to staffchat without using the toggle. Put the following character first to use.
-prefix: "!"
-# Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.
-message-format: "&f[&cStaff-Chat&f] {NAME}: {MESSAGE} "
-
 Join-Message:
   Join:
     enabledSound: false
@@ -13,3 +5,41 @@ Join-Message:
     Message: '&a%player_name% &7joined the game (%server_online%/24)'
   Leave:
     Message: '&c%player_name% &7left the game (%server_online%/24)'
+features:
+  staffchat:
+    Enabled: "&a StaffChat Enabled"
+    Disabled: "&c StaffChat Disabled"
+    no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
+    #Allows you to send a message to staffchat without using the toggle. Put the following character first to use.
+    prefix: "!"
+    # Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.
+    message-format: "&f[&cStaff-Chat&f] {NAME}: {MESSAGE} "
+    staffchat_permission: "staffchat.use"
+  fly:
+    fly_permission: "staff"
+    fly_enable: true
+    fly_enabled: "&aYour flight mode has been enabled."
+    fly_disabled: "&cYour flight mode has been disabled."
+  gamemode:
+    gamemode_permission: "admin"
+    cgamemode_enable: false
+    gamemode_log: console # Log changes to either console or database or false
+    gm_0: "&7Your gamemode is now &csurvival"
+    gm_1: "&7Your gamemode is now &acreative"
+    gm_3: "&7Your gamemode is now &4adventure"
+    gm_4: "&7Your gamemode is now &6spectator"
+    gamemode_actionbar_enable: true # Enable the sending of actionbar messages when the user changes gamemode.
+    gamemode_actionbar_same_messages: true # Use the same messages for both the actionbar and chat.
+  chat:
+    chat_permission: "staff"
+    chat_bypass_permission: "admin" # Permission required to bypass muted chat.
+    mutechat_enable: true
+    chat_muted: "&cChat is muted." # Triggered if some tries to talk while chat is muted.
+    chat_now_muted: "&cChat muted is now turned on."
+    chat_now_unmuted: "&aChat muted is now turend off."
+  help:
+    help_permission: "player"
+    help_enable: true
+    messages:
+      - "&aHelp is always there if you need it."
+      - "&aContact a member of Staff."

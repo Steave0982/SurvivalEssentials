@@ -5,6 +5,7 @@ import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -21,13 +22,15 @@ public class SurvivalEssentials extends JavaPlugin {
 
     private static SurvivalEssentials instance;
     private ArrayList<String> ToggledStaff;
+    Logger log;
 
     public SurvivalEssentials() {
         SurvivalEssentials.instance = this;
+        this.log = Bukkit.getLogger();
+        instance = this;
     }
 
 
-    Logger log = Bukkit.getLogger();
 
 
     @Override

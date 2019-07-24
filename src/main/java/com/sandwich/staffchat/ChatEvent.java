@@ -1,5 +1,6 @@
 package com.sandwich.staffchat;
 
+
 import com.sandwich.SurvivalEssentials;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,22 +13,21 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class ChatEvent implements Listener
 {
-    private SurvivalEssentials se;
+    private SurvivalEssentials SC;
 
-    public ChatEvent(SurvivalEssentials se) {
-        this.se = se;
-    }
+    public ChatEvent(SurvivalEssentials SC) {
+        this.SC = SC; }
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void chatEvent(AsyncPlayerChatEvent event) {
-        if (this.se.getToggledStaff().contains(event.getPlayer().getName()) || (event.getMessage().toCharArray()[0] == this.se.getConfig().getString("prefix").toCharArray()[0] && event.getPlayer().hasPermission("StaffChat.use"))) {
+        if (this.SC.getToggledStaff().contains(event.getPlayer().getName()) || (event.getMessage().toCharArray()[0] == this.SC.getConfig().getString("features.staffchat.prefix").toCharArray()[0] && event.getPlayer().hasPermission("StaffChat.use"))) {
 
             event.setCancelled(true);
-            String formatting = this.se.getConfig().getString("message-format");
+            String formatting = this.SC.getConfig().getString("features.staffchat.message-format");
             formatting = formatting.replace("{NAME}", event.getPlayer().getName());
             formatting = formatting.replace("{MESSAGE}", event.getMessage());
             formatting = ChatColor.translateAlternateColorCodes('&', formatting);
-            if (event.getMessage().toCharArray()[0] == this.se.getConfig().getString("prefix").toCharArray()[0]) {
+            if (event.getMessage().toCharArray()[0] == this.SC.getConfig().getString("features.staffchat.prefix").toCharArray()[0]) {
                 formatting = formatting.replace("!", "");
             }
             for (Player player : Bukkit.getOnlinePlayers()) {
