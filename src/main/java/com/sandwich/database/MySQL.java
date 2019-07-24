@@ -1,5 +1,6 @@
 package com.sandwich.database;
 
+import com.sandwich.SurvivalEssentials;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 
@@ -11,11 +12,17 @@ import java.util.UUID;
 
 public class MySQL {
 
-    public static String host = "";
-    public static String port = "3306";
-    public static String database = "Main";
-    public static String username = "******";
-    public static String password = "*****";
+    static SurvivalEssentials se;
+
+    public MySQL(SurvivalEssentials instance) {
+        se = instance;
+    }
+
+    public static String host = se.getConfig().getString("database.host");
+    public static int port = se.getConfig().getInt("database.port");
+    public static String database = se.getConfig().getString("database.dastabase");
+    public static String username = se.getConfig().getString("database.username");
+    public static String password = se.getConfig().getString("database.password");
     public static Connection con;
 
     static ConsoleCommandSender console = Bukkit.getConsoleSender();
