@@ -1,3 +1,12 @@
+MOTD:
+  Line-1: "&cGaming LOL"
+  Line-2: "&7Hehehhe"
+
+# The maximum players of the server.
+Server-Maximum-Players:
+  Modify: true
+  Maximum-Players: 200
+
 Join-Message:
   Join:
     enabledSound: false
