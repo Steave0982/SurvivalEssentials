@@ -21,6 +21,13 @@ $ Uplaod the plugin into your servers plugin folder
 $ Restart server!
 ```
 
+### Permission List
+
+```sh
+$ Staffchat.use 
+``
+
+
 ### TODO
 * Add Permission groups
 * Teleport Command
