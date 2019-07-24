@@ -1,0 +1,13 @@
+# IntelliJ and Maven packages
+*.class
+*.jar
+target/
+classes/
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Node.js packages
+node_modules/
