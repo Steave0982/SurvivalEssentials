@@ -6,61 +6,34 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.sandwich.SurvivalEssentials;
 
-public class MongoDB {
 
-    SurvivalEssentials plugin;
-    private String ip;
-    private int port;
-    private String database;
-    private DBCollection players;
-    private DB db;
-    private MongoClient client;
-
-    public MongoDB(SurvivalEssentials instance, String ip, int port) {
-        plugin = instance;
-
-        this.ip = ip;
-        this.port = port;
-    }
-
-    public MongoDB(SurvivalEssentials instance, String ip) {
-        plugin = instance;
-
-        this.ip = ip;
-        this.port = 27017; // MongoDB default port.
-    }
-
-    public void connect() {
-        client = new MongoClient(this.ip, this.port);
-        // database = client.getDB("severcore");
-    }
-
-}
-
-/*
 import java.net.UnknownHostException;
 import java.util.UUID;
 public class MongoDB {
-    ServerCore plugin;
-    public MongoDB(ServerCore instance) {
-        plugin = instance;
+    static SurvivalEssentials se;
+
+    public MongoDB(SurvivalEssentials instance) {
+        se = instance;
     }
-    private DBCollection players;
-    private DB Main;
-    private MongoClient client;
-    public boolean connect(String ip, int port){
+
+    private static DBCollection players;
+    private static DB Main;
+    private static MongoClient client;
+
+    public static boolean connect(String ip, int port) {
         //Connect to the specified ip and port
         //Default is localhost, 27017
         client = new MongoClient(ip, port);
         //Get the database called "Main"
         //If it does not exist it will be created automatically
         //once you save something in it
-        Main = client.getDB("Main");
+        Main = client.getDB(se.getConfig().getString("database.database"));
         //Get the collection called "players" in the database "mcserver"
         //Equivalent to the table in MySQL, you can store objects in here
-        players = Main.getCollection("players");
+       //players = Main.getCollection("players");
         return true;
     }
+}
     /**
      * Explanation for storePlayer
      *
@@ -79,4 +52,5 @@ public class MongoDB {
         //Inserts Player Into Collection
         players.insert(obj);
     }
-}*/
+}
+    */

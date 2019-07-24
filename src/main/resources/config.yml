@@ -1,12 +1,10 @@
 MOTD:
   Line-1: "&cGaming LOL"
   Line-2: "&7Hehehhe"
-
 # The maximum players of the server.
 Server-Maximum-Players:
   Modify: true
   Maximum-Players: 200
-
 Join-Message:
   Join:
     enabledSound: false
@@ -24,31 +22,12 @@ features:
     # Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.
     message-format: "&f[&cStaff-Chat&f] {NAME}: {MESSAGE} "
     staffchat_permission: "staffchat.use"
-  fly:
-    fly_permission: "staff"
-    fly_enable: true
-    fly_enabled: "&aYour flight mode has been enabled."
-    fly_disabled: "&cYour flight mode has been disabled."
-  gamemode:
-    gamemode_permission: "admin"
-    cgamemode_enable: false
-    gamemode_log: console # Log changes to either console or database or false
-    gm_0: "&7Your gamemode is now &csurvival"
-    gm_1: "&7Your gamemode is now &acreative"
-    gm_3: "&7Your gamemode is now &4adventure"
-    gm_4: "&7Your gamemode is now &6spectator"
-    gamemode_actionbar_enable: true # Enable the sending of actionbar messages when the user changes gamemode.
-    gamemode_actionbar_same_messages: true # Use the same messages for both the actionbar and chat.
-  chat:
-    chat_permission: "staff"
-    chat_bypass_permission: "admin" # Permission required to bypass muted chat.
-    mutechat_enable: true
-    chat_muted: "&cChat is muted." # Triggered if some tries to talk while chat is muted.
-    chat_now_muted: "&cChat muted is now turned on."
-    chat_now_unmuted: "&aChat muted is now turend off."
-  help:
-    help_permission: "player"
-    help_enable: true
-    messages:
-      - "&aHelp is always there if you need it."
-      - "&aContact a member of Staff."
+#database:
+ #enabled: false
+    #Pick either MySQL or MongoDB
+    #database_type: MySQL
+    #host: ""
+    #port: ""
+    #database: ""
+    #username: ""
+    #password: ""
