@@ -40,6 +40,9 @@ $ Staffchat.use
 * Cosmetics!
 
 
+### Credits
+Thank you to @chriscn for the config class and the database classes!
+
 
 [download]: <https://github.com/Steave0982/SurvivalEssentials/releases>
 [PlaceHolder]: https://www.spigotmc.org/wiki/placeholderapi-placeholders/
