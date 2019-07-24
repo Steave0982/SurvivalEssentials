@@ -12,31 +12,31 @@ import org.bukkit.entity.Player;
 public class EnableSC
         implements CommandExecutor
 {
-    private SurvivalEssentials SC;
+    private SurvivalEssentials se;
 
     public EnableSC(SurvivalEssentials instance) {
-        this.SC = instance;
+        this.se = instance;
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender.hasPermission("StaffChat.use")) {
 
-            if (!this.SC.getToggledStaff().contains(sender.getName()))
+            if (!this.se.getToggledStaff().contains(sender.getName()))
             {
 
-                this.SC.enableStaffChat(sender.getName());
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("Enabled")));
+                this.se.enableStaffChat(sender.getName());
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.se.getConfig().getString("Enabled")));
 
             }
             else
             {
-                this.SC.disableStaffChat(sender.getName());
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("Disabled")));
+                this.se.disableStaffChat(sender.getName());
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.se.getConfig().getString("Disabled")));
             }
 
         } else {
 
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("no-permission")));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.se.getConfig().getString("no-permission")));
             return false;
         }  return false;
     }
