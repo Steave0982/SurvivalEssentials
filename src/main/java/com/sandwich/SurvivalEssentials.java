@@ -1,5 +1,6 @@
 package com.sandwich;
 
+import com.sandwich.Listener.Motd;
 import com.sandwich.Listener.PlayerJoin;
 import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
@@ -39,6 +40,7 @@ public class SurvivalEssentials extends JavaPlugin {
             log.info(ChatColor.GREEN + "SurvivalEssentials is Enabled");
             getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
             getServer().getPluginManager().registerEvents(new PlayerJoin(this), this);
+            getServer().getPluginManager().registerEvents(new Motd(this), this);
             getCommand("staffchat").setExecutor(new EnableSC(this));
             getConfig().options().copyDefaults(true);
             saveConfig();
