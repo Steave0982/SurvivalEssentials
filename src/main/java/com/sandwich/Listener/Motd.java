@@ -10,7 +10,6 @@ public class Motd implements Listener {
 
     private SurvivalEssentials se;
 
-
     public Motd(SurvivalEssentials se) {
         this.se = se;
     }
