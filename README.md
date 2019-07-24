@@ -25,7 +25,7 @@ $ Restart server!
 
 ```sh
 $ Staffchat.use 
-``
+```
 
 
 ### TODO
