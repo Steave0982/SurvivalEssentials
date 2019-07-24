@@ -1,6 +1,8 @@
 name: SurvivalEssentials
 version: 1.0
 main: com.sandwich.SurvivalEssentials
+depend: [PlaceholderAPI]
+loadbefore: [PlaceholderAPI]
 commands:
   StaffChat:
     description: Allows staff to communicate.

@@ -5,3 +5,11 @@ no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
 prefix: "!"
 # Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.
 message-format: "&f[&cStaff-Chat&f] {NAME}: {MESSAGE} "
+
+Join-Message:
+  Join:
+    enabledSound: false
+    Sound: BLOCK_ANVIL_FALL
+    Message: '&a%player_name% &7joined the game (%server_online%/24)'
+  Leave:
+    Message: '&c%player_name% &7left the game (%server_online%/24)'

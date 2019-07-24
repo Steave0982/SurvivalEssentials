@@ -11,14 +11,17 @@ I will be working on many features as this plugin grows. Here are the commands c
 
 ### Installation
 
-This plugin requires spigot to run. 
+This plugin requires spigot, and PlaceHolderapi to run!
 
 Download the plugin from here! [Download] 
+Download placeholderapi from here! [PlaceHolder]
 
 ```sh
-$ Download The Plugin
+$ Download The Plugins
 $ Uplaod the plugin into your servers plugin folder
 $ Restart server!
+$ Then run the following commands : /papi ecloud download Server , /papi ecloud download Player , /papi reload
+$ After that the plugin should be fully working
 ```
 
 ### TODO
@@ -30,3 +33,4 @@ $ Restart server!
 
 
 [download]: <https://github.com/Steave0982/SurvivalEssentials/releases>
+[PlaceHolder]: https://www.spigotmc.org/wiki/placeholderapi-placeholders/

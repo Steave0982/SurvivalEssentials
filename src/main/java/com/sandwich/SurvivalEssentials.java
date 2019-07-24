@@ -1,5 +1,6 @@
 package com.sandwich;
 
+import com.sandwich.Listener.PlayerJoin;
 import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
 import org.bukkit.Bukkit;
@@ -31,11 +32,17 @@ public class SurvivalEssentials extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        log.info(ChatColor.GREEN + "SurvivalEssentials is Enabled");
-        getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
-        getCommand("staffchat").setExecutor(new EnableSC(this));
-
-        this.ToggledStaff = new ArrayList();
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            log.info(ChatColor.GREEN + "SurvivalEssentials is Enabled");
+            getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
+            getServer().getPluginManager().registerEvents(new PlayerJoin(this), this);
+            getCommand("staffchat").setExecutor(new EnableSC(this));
+            getConfig().options().copyDefaults(true);
+            saveConfig();
+            this.ToggledStaff = new ArrayList();
+        } else {
+            throw new RuntimeException("Could not find PlaceholderAPI!! Plugin can not work without it!");
+        }
     }
 
     public void enableStaffChat(String player) {
