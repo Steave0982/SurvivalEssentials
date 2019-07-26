@@ -1,3 +1,5 @@
+General:
+  no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
 MOTD:
   Line-1: "&cGaming LOL"
   Line-2: "&7Hehehhe"
@@ -16,7 +18,8 @@ features:
   staffchat:
     Enabled: "&a StaffChat Enabled"
     Disabled: "&c StaffChat Disabled"
-    no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
+    Actionbar-Enabled: "&a Staffchat Enabled"
+    Actionbar-Disabled: "&c Staffchat Disabled"
     #Allows you to send a message to staffchat without using the toggle. Put the following character first to use.
     prefix: "!"
     # Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.

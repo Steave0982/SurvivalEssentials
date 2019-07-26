@@ -2,14 +2,15 @@ package com.sandwich;
 
 import com.sandwich.Listener.Motd;
 import com.sandwich.Listener.PlayerJoin;
-import com.sandwich.database.MongoDB;
-import com.sandwich.database.MySQL;
+import com.sandwich.commands.VanishCommand;
 import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.util.ArrayList;
+
 
 
 /**
@@ -18,7 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * @author Alexander Milanovich
  */
 
-import java.util.ArrayList;
+
 import java.util.logging.Logger;
 
 public class SurvivalEssentials extends JavaPlugin {
@@ -33,19 +34,35 @@ public class SurvivalEssentials extends JavaPlugin {
         instance = this;
     }
 
+    public String notPlayer = ChatColor.RED + "You must be a player to do this command!";
+    public String noPermission = ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("General.no-permission"));
+    // public DB db = new DB(this);
+
+    public Permission Fly = new Permission("se.fly");
+    public Permission Vanish = new Permission("se.vanish");
+    public Permission Admin = new Permission("se.admin");
+
+    Permission[] permissions = {
+            Fly, Vanish, Admin
+    };
+
 
     @Override
     public void onEnable() {
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            for (Permission permission : permissions) {
+                Bukkit.getServer().getPluginManager().addPermission(permission);
+            }
             log.info(ChatColor.GREEN + "SurvivalEssentials is Enabled");
             getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
             getServer().getPluginManager().registerEvents(new PlayerJoin(this), this);
             getServer().getPluginManager().registerEvents(new Motd(this), this);
             getCommand("staffchat").setExecutor(new EnableSC(this));
+            getCommand("vanish").setExecutor(new VanishCommand(this));
             getConfig().options().copyDefaults(true);
             saveConfig();
             this.ToggledStaff = new ArrayList();
-           // databaseCon();
+            // databaseCon();
         } else {
             throw new RuntimeException("Could not find PlaceholderAPI!! Plugin can not work without it!");
         }
@@ -62,9 +79,8 @@ public class SurvivalEssentials extends JavaPlugin {
 
 
     public ArrayList<String> getToggledStaff() {
-        return (ArrayList)this.ToggledStaff.clone();
+        return (ArrayList) this.ToggledStaff.clone();
     }
-
 
 
     @Override

@@ -8,3 +8,7 @@ commands:
     description: Allows staff to communicate.
     aliases:
     - sc
+  vanish:
+    description: You can vanish yourself and other players
+    usage: /vanish
+    aliases: [v]
