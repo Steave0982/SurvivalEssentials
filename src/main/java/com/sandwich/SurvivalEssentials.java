@@ -34,8 +34,6 @@ public class SurvivalEssentials extends JavaPlugin {
     }
 
 
-
-
     @Override
     public void onEnable() {
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
