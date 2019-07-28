@@ -1,8 +1,8 @@
 General:
   no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
 MOTD:
-  Line-1: "&cGaming LOL"
-  Line-2: "&7Hehehhe"
+  Line-1: "&cLine 1"
+  Line-2: "&aLine 2"
 # The maximum players of the server.
 Server-Maximum-Players:
   Modify: true
@@ -25,6 +25,9 @@ features:
     # Placeholders are {NAME} and {MESSAGE}, for the name of the staff member speaking and the message they sent.
     message-format: "&f[&cStaff-Chat&f] {NAME}: {MESSAGE} "
     staffchat_permission: "staffchat.use"
+  vanish:
+    Enabled: "&aYou have been vanished"
+    Disabled: "&cYou have been unvanished"
 #database:
  #enabled: false
     #Pick either MySQL or MongoDB

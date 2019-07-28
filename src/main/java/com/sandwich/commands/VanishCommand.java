@@ -42,11 +42,11 @@ public class VanishCommand implements CommandExecutor, Listener {
                 if (args.length == 0) {
                     if (!vanished.contains(playerUUID)) {
                         vanishPlayer(playerUUID, true);
-                        player.sendMessage(ChatColor.GREEN + "You have been vanished");
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("features.vanish.Enabled")));
                         return true;
                     } else {
                         vanishPlayer(playerUUID, false);
-                        player.sendMessage(ChatColor.RED + "You have been unvanished");
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("features.vanish.Disabled")));
                         return true;
                     }
                 } else if (args.length == 1) {
@@ -54,12 +54,12 @@ public class VanishCommand implements CommandExecutor, Listener {
                     if (toVanish != null) {
                         if (!vanished.contains(toVanish)) {
                             vanishPlayer(toVanish, true);
-                            Bukkit.getPlayer(toVanish).sendMessage(ChatColor.GREEN + "You have been vanished");
+                            Bukkit.getPlayer(toVanish).sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("features.vanish.Enabled")));
                             player.sendMessage(ChatColor.GREEN + "You have vanished " + toVanish);
                             return true;
                         } else {
                             vanishPlayer(toVanish, false);
-                            Bukkit.getPlayer(toVanish).sendMessage(ChatColor.RED + "You have been unvanished");
+                            Bukkit.getPlayer(toVanish).sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("features.vanish.Disabled")));
                             player.sendMessage(ChatColor.RED + "You have unvanished " + toVanish);
                             return true;
                         }
