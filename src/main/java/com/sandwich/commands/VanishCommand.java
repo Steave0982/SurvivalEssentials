@@ -51,16 +51,17 @@ public class VanishCommand implements CommandExecutor, Listener {
                     }
                 } else if (args.length == 1) {
                     UUID toVanish = Bukkit.getPlayerExact(args[0]).getUniqueId();
+                    String vanishedp = Bukkit.getPlayer(toVanish).getName();
                     if (toVanish != null) {
                         if (!vanished.contains(toVanish)) {
                             vanishPlayer(toVanish, true);
                             Bukkit.getPlayer(toVanish).sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("features.vanish.Enabled")));
-                            player.sendMessage(ChatColor.GREEN + "You have vanished " + toVanish);
+                            player.sendMessage(ChatColor.GREEN + "You have vanished " + ChatColor.BLUE + vanishedp);
                             return true;
                         } else {
                             vanishPlayer(toVanish, false);
                             Bukkit.getPlayer(toVanish).sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("features.vanish.Disabled")));
-                            player.sendMessage(ChatColor.RED + "You have unvanished " + toVanish);
+                            player.sendMessage(ChatColor.RED + "You have unvanished " + ChatColor.BLUE + vanishedp);
                             return true;
                         }
                     } else {
