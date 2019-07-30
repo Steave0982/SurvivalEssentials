@@ -12,3 +12,10 @@ commands:
     description: You can vanish yourself and other players
     usage: /vanish
     aliases: [v]
+  cc:
+    description: Global Clear Chat
+    usage: /<command>
+    aliases: [chatclear, clearchat]
+  ccme:
+    description: Clear Chat for the sender
+    usage: /<command

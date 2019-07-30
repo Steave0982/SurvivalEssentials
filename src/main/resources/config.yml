@@ -28,6 +28,9 @@ features:
   vanish:
     Enabled: "&aYou have been vanished"
     Disabled: "&cYou have been unvanished"
+  clearchat:
+    GlobalClear: "&c[&aServerName&c] &aChat has been cleared!"
+    PersonalClear: "Your Chat has been cleared!"
 #database:
  #enabled: false
     #Pick either MySQL or MongoDB

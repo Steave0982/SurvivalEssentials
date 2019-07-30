@@ -2,6 +2,7 @@ package com.sandwich;
 
 import com.sandwich.Listener.Motd;
 import com.sandwich.Listener.PlayerJoin;
+import com.sandwich.commands.ClearChatCommand;
 import com.sandwich.commands.VanishCommand;
 import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
@@ -41,6 +42,7 @@ public class SurvivalEssentials extends JavaPlugin {
     public Permission Fly = new Permission("se.fly");
     public Permission Vanish = new Permission("se.vanish");
     public Permission Admin = new Permission("se.admin");
+    public Permission ClearChat = new Permission("se.clearchat");
 
     Permission[] permissions = {
             Fly, Vanish, Admin
@@ -59,6 +61,8 @@ public class SurvivalEssentials extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new Motd(this), this);
             getCommand("staffchat").setExecutor(new EnableSC(this));
             getCommand("vanish").setExecutor(new VanishCommand(this));
+            getCommand("cc").setExecutor(new ClearChatCommand(this));
+            getCommand("ccme").setExecutor(new ClearChatCommand(this));
             getConfig().options().copyDefaults(true);
             saveConfig();
             this.ToggledStaff = new ArrayList();
