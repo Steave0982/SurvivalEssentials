@@ -32,6 +32,8 @@ $ After that the plugin should be fully working
 
 ```sh
 $ Staffchat.use 
+$ se.vanish
+$ se.clearchat
 ```
 
 
