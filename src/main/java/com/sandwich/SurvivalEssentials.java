@@ -3,6 +3,7 @@ package com.sandwich;
 import com.sandwich.Listener.Motd;
 import com.sandwich.Listener.PlayerJoin;
 import com.sandwich.commands.ClearChatCommand;
+import com.sandwich.commands.InstallCommand;
 import com.sandwich.commands.VanishCommand;
 import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
@@ -10,8 +11,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.java.JavaPlugin;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 
 
 /**
@@ -63,8 +64,12 @@ public class SurvivalEssentials extends JavaPlugin {
             getCommand("vanish").setExecutor(new VanishCommand(this));
             getCommand("cc").setExecutor(new ClearChatCommand(this));
             getCommand("ccme").setExecutor(new ClearChatCommand(this));
+            getCommand("install").setExecutor(new InstallCommand(this));
             getConfig().options().copyDefaults(true);
             saveConfig();
+
+
+
             this.ToggledStaff = new ArrayList();
             // databaseCon();
         } else {
@@ -92,15 +97,16 @@ public class SurvivalEssentials extends JavaPlugin {
         log.info(ChatColor.RED + "SurvivalEssentials is Disabled");
     }
 
- /*   public void databaseCon() {
-        if (getConfig().getBoolean("database.enabled") == true) {
-            if (getConfig().getString("database.database_type") == "MySQL") {
-                MySQL.connect();
+    //TODO create a method to detect if databse has been enabled in config, then attemp to connect to DB Depending on which is selected
+     /*   public void databaseCon() {
+            if (getConfig().getBoolean("database.enabled") == true) {
+                if (getConfig().getString("database.database_type") == "MySQL") {
+                    MySQL.connect();
+                }
+                if (getConfig().getString("database.database_type") == "MongoDB") {
+                    MongoDB.connect(getConfig().getString("database.host"), getConfig().getInt("database.port"));
+                }
             }
-            if (getConfig().getString("database.database_type") == "MongoDB") {
-                MongoDB.connect(getConfig().getString("database.host"), getConfig().getInt("database.port"));
-            }
-        }
-    } */
+       } */
 
 }

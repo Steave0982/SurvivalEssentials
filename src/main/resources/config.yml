@@ -1,5 +1,5 @@
 General:
-  no-permission: "&c You do not have permission! (Permission = StaffChat.use)"
+  no-permission: "&c You do not have permission!"
 MOTD:
   Line-1: "&cLine 1"
   Line-2: "&aLine 2"

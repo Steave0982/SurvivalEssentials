@@ -1,14 +1,10 @@
 package com.sandwich.database;
 
-
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.sandwich.SurvivalEssentials;
 
-
-import java.net.UnknownHostException;
-import java.util.UUID;
 public class MongoDB {
     static SurvivalEssentials se;
 
@@ -43,6 +39,7 @@ public class MongoDB {
      * @param pkills Counts how many kills the player has gotten (Named pkills incase we add mobkills)
      */
 
+    //TODO Create method to store information regarding player kills, and other stats
     /*public void storePlayer(UUID uuid, String name, String rank, int pkills){
         //This player has never played before and we just want to create a object for him
         DBObject obj = new BasicDBObject("uuid", uuid);

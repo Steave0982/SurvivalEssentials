@@ -18,4 +18,7 @@ commands:
     aliases: [chatclear, clearchat]
   ccme:
     description: Clear Chat for the sender
-    usage: /<command
+    usage: /<command>
+  install:
+    description: Install Needed Components
+    usage: /<command>

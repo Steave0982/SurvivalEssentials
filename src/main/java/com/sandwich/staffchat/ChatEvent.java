@@ -27,9 +27,11 @@ public class ChatEvent implements Listener
             formatting = formatting.replace("{NAME}", event.getPlayer().getName());
             formatting = formatting.replace("{MESSAGE}", event.getMessage());
             formatting = ChatColor.translateAlternateColorCodes('&', formatting);
+
             if (event.getMessage().toCharArray()[0] == this.SC.getConfig().getString("features.staffchat.prefix").toCharArray()[0]) {
-                formatting = formatting.replace("!", "");
+                    formatting = formatting.replace("!", "");
             }
+
             for (Player player : Bukkit.getOnlinePlayers()) {
 
                 if (player.hasPermission("StaffChat.use")) player.sendMessage(formatting);

@@ -106,14 +106,15 @@ public class VanishCommand implements CommandExecutor, Listener {
             for (Player all : Bukkit.getOnlinePlayers()) {
                 all.hidePlayer(plugin, Bukkit.getPlayer(vanishPlayer));
             }
-            //                        SuperTrailsAPI.getPlayerData(player).setHidden(true, HideReason.CUSTOM_VANISH);
+            //TODO Work on detection method to see if SuperTrails is enabled, the remove the particles
+            //SuperTrailsAPI.getPlayerData(player).setHidden(true, HideReason.CUSTOM_VANISH);
 
         } else {
             vanished.remove(vanishPlayer);
             for (Player all : Bukkit.getOnlinePlayers()) {
                 all.showPlayer(plugin, Bukkit.getPlayer(vanishPlayer));
             }
-            //                        SuperTrailsAPI.getPlayerData(player).setHidden(false, HideReason.CUSTOM_VANISH);
+            //SuperTrailsAPI.getPlayerData(player).setHidden(false, HideReason.CUSTOM_VANISH);
         }
     }
 }
