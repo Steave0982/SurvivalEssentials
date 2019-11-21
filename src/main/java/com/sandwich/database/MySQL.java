@@ -27,7 +27,7 @@ public class MySQL {
 
     static ConsoleCommandSender console = Bukkit.getConsoleSender();
 
-    // connect
+    //TODO Re-design player information storage
     public static void connect() {
         if (!isConnected()) {
             try {
@@ -41,7 +41,7 @@ public class MySQL {
         }
     }
 
-    // disconnect
+    //TODO Clean disconnect function / redesign
     public static void disconnect() {
         if (isConnected()) {
             try {
