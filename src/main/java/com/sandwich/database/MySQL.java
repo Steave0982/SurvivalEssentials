@@ -53,6 +53,7 @@ public class MySQL {
         }
     }
 
+
     // isConnected
     public static boolean isConnected() {
         return (con != null);

@@ -21,24 +21,17 @@ public class EnableSC
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender.hasPermission("StaffChat.use")) {
 
-            if (!this.SC.getToggledStaff().contains(sender.getName()))
-            {
-
+            if (!this.SC.getToggledStaff().contains(sender.getName())) {
                 this.SC.enableStaffChat(sender.getName());
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("features.staffchat.Enabled")));
                 ActionBar.send((Player) sender, ChatColor.GREEN + ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("features.staffchat.Actionbar-Enabled")));
-
-            }
-            else
-            {
+            } else {
                 this.SC.disableStaffChat(sender.getName());
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("features.staffchat.Disabled")));
                 ActionBar.send((Player) sender, ChatColor.RED + ChatColor.translateAlternateColorCodes('&', this.SC.getConfig().getString("features.staffchat.Actionbar-Disabled")));
-
             }
 
-        } else {
-
+             } else {
             sender.sendMessage(SC.noPermission);
             return false;
         }  return false;
