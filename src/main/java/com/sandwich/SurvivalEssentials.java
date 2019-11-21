@@ -2,9 +2,7 @@ package com.sandwich;
 
 import com.sandwich.Listener.Motd;
 import com.sandwich.Listener.PlayerJoin;
-import com.sandwich.commands.ClearChatCommand;
-import com.sandwich.commands.InstallCommand;
-import com.sandwich.commands.VanishCommand;
+import com.sandwich.commands.*;
 import com.sandwich.staffchat.ChatEvent;
 import com.sandwich.staffchat.EnableSC;
 import org.bukkit.Bukkit;
@@ -29,6 +27,8 @@ public class SurvivalEssentials extends JavaPlugin {
     private static SurvivalEssentials instance;
     private ArrayList<String> ToggledStaff;
     Logger log;
+
+    public String prefix = ChatColor.translateAlternateColorCodes('&',this.getConfig().getString("General.prefix"));
 
     public SurvivalEssentials() {
         SurvivalEssentials.instance = this;
@@ -65,6 +65,7 @@ public class SurvivalEssentials extends JavaPlugin {
             getCommand("cc").setExecutor(new ClearChatCommand(this));
             getCommand("ccme").setExecutor(new ClearChatCommand(this));
             getCommand("install").setExecutor(new InstallCommand(this));
+            getCommand("kick").setExecutor(new KickCommand(this));
             getConfig().options().copyDefaults(true);
             saveConfig();
 

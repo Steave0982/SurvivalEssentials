@@ -1,5 +1,6 @@
 General:
   no-permission: "&c You do not have permission!"
+  prefix: "&c[Survival] "
 MOTD:
   Line-1: "&cLine 1"
   Line-2: "&aLine 2"
@@ -40,3 +41,4 @@ features:
     #database: ""
     #username: ""
     #password: ""
+# Chat Messages

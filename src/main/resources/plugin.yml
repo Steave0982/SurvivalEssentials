@@ -22,3 +22,6 @@ commands:
   install:
     description: Install Needed Components
     usage: /<command>
+  kick:
+    description: Kick players
+    usage: /<command>
