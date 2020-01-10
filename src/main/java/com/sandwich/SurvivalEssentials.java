@@ -19,7 +19,6 @@ import java.util.ArrayList;
  * @author Alexander Milanovich
  */
 
-
 import java.util.logging.Logger;
 
 public class SurvivalEssentials extends JavaPlugin {
