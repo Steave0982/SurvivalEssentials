@@ -42,7 +42,7 @@ public class KickCommand implements CommandExecutor {
             }
             else {
 
-                p.sendMessage("don`t have Permissions for this command!");
+                p.sendMessage(SC.noPermission);
             }
         }
 
